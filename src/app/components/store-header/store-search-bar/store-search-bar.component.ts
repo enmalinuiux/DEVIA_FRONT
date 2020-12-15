@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StoreSearchBarComponent implements OnInit {
 
-  constructor() { }
+  categories: Array<any>;
+
+  constructor() {
+    this.categories = ["bebidas","cereales","dulces","viberes","frutas","cosmericos"]
+   }
 
   ngOnInit(): void {
   }
