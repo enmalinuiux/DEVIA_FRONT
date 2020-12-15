@@ -14,6 +14,7 @@ import { StoreFiltersComponent } from './components/store-filters/store-filters.
 import { StoreProductsComponent } from './components/store-products/store-products.component';
 import { StoreProductComponent } from './components/store-products/store-product/store-product.component';
 import { StoreSliderComponent } from './components/store-slider/store-slider.component';
+import { ShoppingCartComponent } from './pages/store/shopping-cart/shopping-cart.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { StoreSliderComponent } from './components/store-slider/store-slider.com
     StoreFiltersComponent,
     StoreProductsComponent,
     StoreProductComponent,
-    StoreSliderComponent
+    StoreSliderComponent,
+    ShoppingCartComponent
   ],
   imports: [
     BrowserModule,

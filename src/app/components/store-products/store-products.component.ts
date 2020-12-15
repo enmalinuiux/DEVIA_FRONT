@@ -12,14 +12,14 @@ export class StoreProductsComponent implements OnInit {
   constructor() { 
     this.productos = [
       {
-        description: "arroz",
+        description: "Arroz La Garza",
         price: 15,
         img: "https://compradirecta.do/wp-content/uploads/2018/05/A-80-450x450.jpg"
       },
       {
-        description: "arroz",
-        price: 15,
-        img: "https://compradirecta.do/wp-content/uploads/2018/05/A-80-450x450.jpg"
+        description: "Aceite Crisol",
+        price: 20,
+        img: "https://res.cloudinary.com/almacendo/image/upload/v1573739195/Aceite/Aceite-Crisol-Puro-de-Soya_-64oz-Front.jpg"
       },
       {
         description: "arroz",
