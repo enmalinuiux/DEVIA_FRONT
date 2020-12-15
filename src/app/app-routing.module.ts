@@ -4,11 +4,16 @@ import { StoreHomeComponent } from './pages/store/store-home/store-home.componen
 
 const routes: Routes = [
   {
-    path:'store',
+    path: 'store',
     component: StoreHomeComponent,
     children:[
       
     ]
+  },
+  {
+    path: '',
+    redirectTo: '/store',
+    pathMatch: 'full'
   }
 ];
 
