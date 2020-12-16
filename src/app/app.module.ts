@@ -15,6 +15,8 @@ import { StoreProductsComponent } from './components/store-products/store-produc
 import { StoreProductComponent } from './components/store-products/store-product/store-product.component';
 import { StoreSliderComponent } from './components/store-slider/store-slider.component';
 import { ShoppingCartComponent } from './pages/store/shopping-cart/shopping-cart.component';
+import { ShoppingCartModalComponent } from './components/store-header/store-notifications/shopping-cart-modal/shopping-cart-modal.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -29,12 +31,14 @@ import { ShoppingCartComponent } from './pages/store/shopping-cart/shopping-cart
     StoreProductsComponent,
     StoreProductComponent,
     StoreSliderComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    ShoppingCartModalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

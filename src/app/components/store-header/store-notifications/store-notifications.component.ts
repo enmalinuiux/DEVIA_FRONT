@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'StoreNotifications',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StoreNotificationsComponent implements OnInit {
 
-  constructor() { }
+  shoppingCart = faShoppingCart;
+  notiCount: number;
+
+  constructor(private modalService: NgbModal) {
+    this.notiCount = 5
+   }
 
   ngOnInit(): void {
+  }
+
+  openScrollableContent(longContent) {
+    this.modalService.open(longContent, { scrollable: true });
   }
 
 }
