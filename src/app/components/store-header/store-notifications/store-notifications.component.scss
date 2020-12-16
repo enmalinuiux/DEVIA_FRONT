@@ -1,0 +1,7 @@
+.cart{
+    .dropdown-menu{ display: none; margin-top: 0;}
+}
+
+.cart:hover{
+    .dropdown-menu{ display: block; }
+}
