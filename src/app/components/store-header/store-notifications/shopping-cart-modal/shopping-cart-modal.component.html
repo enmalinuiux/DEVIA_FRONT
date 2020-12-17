@@ -1,9 +1,42 @@
-<div class="modal-header">
-  <h4 class="modal-title">Modal title</h4>
-</div>
-<div class="modal-body">
-  <p>Your Cart is Empty :(</p>
-</div>
-<div class="modal-footer">
-  <button type="button" class="btn btn-light">Close</button>
+<div class="card m-0 p-0" style="width: 25rem;">
+  <ng-container *ngIf="productos; else elseTemplate">
+    <div class="card-header justify-content-center">
+      <h2 class="mb-1 fw-bold">Shoping Cart <span class="fw-bold">({{productos.length}})</span></h2>
+    </div>  
+    <div class="card-body p-0">
+    <div class="list-group list-group-flush">
+      <a class="list-group-item list-group-item-action" *ngFor="let item of productos" aria-current="true">
+        <div class="row">
+          <div class="col-sm-3">
+            <img [src]="item.img" alt="" class="img-fluid">
+          </div>
+          <div class="col-sm-9">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">{{item.description}}</h5>
+              <button (click)="removeItem(item)" class="btn btn-tranparent mt-0 text-danger"><small><fa-icon [icon]="btnRemove"></fa-icon></small></button>
+            </div>
+            <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+            <div class="d-flex w-100 justify-content-between">
+              <div class="d-flex w-50 justify-content-between">
+                <p class="">Cant: <span class="fw-bold">{{item.cant}}</span></p>
+                <p class="">Price: <span class="fw-bold">{{item.price | currency}}</span></p>
+              </div>
+              <small>Subotal: <span class="fw-bold">{{item.price * item.cant | currency}}</span></small>
+            </div>          
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="card-footer">
+    <p>Total: <span class="fw-bold">{{totalAmount | currency}}</span></p>
+  </div>
+  <div class="card-footer">
+    <button class="btn btn-block btn-outline-primary" type="button">Ir al Carrito</button>
+    <button class="btn btn-block btn-primary" type="button">Checkout</button>
+  </div>
+  </ng-container>
+  <ng-template #elseTemplate class="justify-content-center">
+    <p>Tu carrito esta vacio</p>
+  </ng-template>
 </div>

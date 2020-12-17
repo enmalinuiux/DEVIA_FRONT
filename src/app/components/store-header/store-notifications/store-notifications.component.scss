@@ -1,7 +1,13 @@
 .cart{
-    .dropdown-menu{ display: none; margin-top: 0;}
+    position: relative;
+    .dropdown-menu{ display: none; margin-top: 0; position: absolute; transform: translateX(-80%); }
 }
 
-.cart:hover{
+.notify{
+    position: relative;
+    .dropdown-menu{ display: none; margin-top: 0; position: absolute; transform: translateX(-100%); }
+}
+
+.notify:hover, .cart:hover{
     .dropdown-menu{ display: block; }
 }

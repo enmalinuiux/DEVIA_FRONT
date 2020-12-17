@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { faBell, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'StoreNotifications',
@@ -10,32 +9,16 @@ import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 export class StoreNotificationsComponent implements OnInit {
 
   shoppingCart = faShoppingCart;
-  notiCount: number;
-  closeResult: string;
+  notify = faBell;
 
-  constructor(private modalService: NgbModal) {
+  notiCount: number;
+  cartItemCount: number;
+
+  constructor() {
     this.notiCount = 5
+    this.cartItemCount = 3;
    }
 
   ngOnInit(): void {
   }
-
-  open(content) {
-    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
-      this.closeResult = `Closed with: ${result}`;
-    }, (reason) => {
-      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-    });
-  }
-  
-  private getDismissReason(reason: any): string {
-    if (reason === ModalDismissReasons.ESC) {
-      return 'by pressing ESC';
-    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
-      return 'by clicking on a backdrop';
-    } else {
-      return  `with: ${reason}`;
-    }
-  }
-
 }

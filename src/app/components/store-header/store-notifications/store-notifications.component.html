@@ -1,10 +1,20 @@
-<div class="text-right">
-  <div class="cart dropdown">
-    <a [routerLink]="['/store/shopping-cart']" class="btn btn-outline-dark mb-0"
+<div class="text-right d-flex">
+  <div class="notify dropdown ml-2">
+    <a class="btn btn-outline-dark border-0 mb-0 d-flex"
       data-toggle="dropdown">
-      <fa-icon [icon]="shoppingCart"></fa-icon>&nbsp;&nbsp;<span class="badge bg-danger text-white">{{notiCount}}</span>
+      <fa-icon [icon]="notify"></fa-icon>&nbsp;&nbsp;<span class="badge bg-danger text-white mt-1">{{notiCount}}</span>
     </a>
-    <div class="dropdown-menu">
+    <div class="dropdown-menu dropdown-menu-end">
+      <ShoppingCartModal></ShoppingCartModal>
+    </div>
+  </div>
+
+  <div class="dropdown cart ml-2">
+    <a [routerLink]="['/store/shopping-cart']" class="btn btn-outline-dark border-0 mb-0 d-flex"
+      data-toggle="dropdown">
+      <fa-icon [icon]="shoppingCart"></fa-icon>&nbsp;&nbsp;<span class="badge bg-danger text-white mt-1">{{cartItemCount}}</span>
+    </a>
+    <div class="dropdown-menu border-0 bg-transparent">
       <ShoppingCartModal></ShoppingCartModal>
     </div>
   </div>
