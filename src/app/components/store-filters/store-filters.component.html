@@ -1,1 +1,14 @@
-<p>store-filters works!</p>
+<div class="card w-100 h-100 p-0">
+    <div class="card-header">
+        <span class="card-title fw-bold">
+            Filtros de Busqueda
+        </span>
+    </div>
+    <div class="card-body p-0">
+        <div class="accordion accordion-flush" id="accordionExample">
+            <div class="accordion-item" *ngFor="let item of filters">
+                <Filter [filter]="item"></Filter>
+            </div>
+        </div>
+    </div>
+</div>

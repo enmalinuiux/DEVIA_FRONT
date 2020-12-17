@@ -1,0 +1,32 @@
+*{
+    font-size: .8rem;
+}
+
+.card-body{
+    max-height: 30vh;
+    min-height: 30vh;
+    overflow-y: scroll;
+}
+
+/* width */
+.card-body::-webkit-scrollbar {
+    height: 90%;
+    width: 10px;
+    margin: 2px;
+}
+
+/* Track */
+.card-body::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: transparent;
+}
+
+/* Handle */
+.card-body::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 10px;
+}
+
+.card-body::-webkit-scrollbar-thumb:hover {
+    background: rgb(104, 104, 104);
+}
