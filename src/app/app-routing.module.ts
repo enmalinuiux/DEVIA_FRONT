@@ -2,15 +2,22 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ShoppingCartComponent } from './pages/store/shopping-cart/shopping-cart.component';
 import { StoreHomeComponent } from './pages/store/store-home/store-home.component';
+import { StoreComponent } from './pages/store/store/store.component';
 
 const routes: Routes = [
   {
     path: 'store',
-    component: StoreHomeComponent
-  },
-  {
-    path: 'store/shopping-cart',
-    component: ShoppingCartComponent
+    component: StoreComponent,
+    children: [
+      {
+        path: '',
+        component: StoreHomeComponent
+      },
+      {
+        path: 'shopping-cart',
+        component: ShoppingCartComponent
+      },
+    ]
   },
   {
     path: '',

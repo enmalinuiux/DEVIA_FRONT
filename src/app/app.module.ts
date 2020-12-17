@@ -17,6 +17,7 @@ import { StoreSliderComponent } from './components/store-slider/store-slider.com
 import { ShoppingCartComponent } from './pages/store/shopping-cart/shopping-cart.component';
 import { ShoppingCartModalComponent } from './components/store-header/store-notifications/shopping-cart-modal/shopping-cart-modal.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { StoreComponent } from './pages/store/store/store.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     StoreProductComponent,
     StoreSliderComponent,
     ShoppingCartComponent,
-    ShoppingCartModalComponent
+    ShoppingCartModalComponent,
+    StoreComponent
   ],
   imports: [
     BrowserModule,

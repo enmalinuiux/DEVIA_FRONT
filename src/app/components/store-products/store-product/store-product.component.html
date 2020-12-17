@@ -1,4 +1,4 @@
-<div class="card m-0 mt-4 rounded-0">
+<!-- <div class="card m-0 mt-4 rounded-0">
     <div class="card-img p-4">
         <img [src]="item.img" alt="" class="img-fluid">
     </div>
@@ -7,5 +7,38 @@
     </div>
     <div class="card-body">
         <h4>{{item.price | currency}}</h4>
+    </div>
+</div> -->
+
+<div class="container page-wrapper">
+    <div class="page-inner">
+        <div class="row">
+            <div class="el-wrapper box mt-4">
+                <div class="ribbon ribbon-top-left" *ngIf="item.offert"><span>Offert!</span></div>
+                <div class="box-up">
+                    <img [src]="item.img" alt="" class="img img-fluid" alt="">
+                    <div class="img-info">
+                        <div class="info-inner">
+                            <span class="p-name">{{item.description}}</span>
+                            <span class="p-company">Devia</span>
+                        </div>
+                        <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                    </div>
+                </div>
+                
+                <div class="box-down">
+                    <div class="h-bg">
+                        <div class="h-bg-inner"></div>
+                    </div>
+                    
+                    <a class="cart" href="#">
+                        <span class="price">{{item.price | currency}}</span>
+                        <span class="add-to-cart">
+                            <span class="txt">Add in cart</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

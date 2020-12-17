@@ -1,13 +1,19 @@
 .cart{
     position: relative;
-    .dropdown-menu{ display: none; margin-top: 0; position: absolute; transform: translateX(-80%); }
+    .dropdown-menu{ display: none; margin-top: 0; position: absolute; transform: translateX(-77.5%); }
 }
 
 .notify{
     position: relative;
-    .dropdown-menu{ display: none; margin-top: 0; position: absolute; transform: translateX(-100%); }
+    .dropdown-menu{ display: none; margin-top: 0; position: absolute; transform: translateX(-77.5%); }
 }
 
 .notify:hover, .cart:hover{
     .dropdown-menu{ display: block; }
+}
+
+.card{
+    max-height: 40vh;
+    min-height: 40vh;
+    overflow-y: scroll;
 }
