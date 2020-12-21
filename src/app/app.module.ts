@@ -1,24 +1,30 @@
+//npm dependencies
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+//app-component
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { StoreHomeComponent } from './pages/store/store-home/store-home.component';
+
+//components
 import { NavBarComponent } from './components/shared/nav-bar/nav-bar.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
-import { StoreHeaderComponent } from './components/store-header/store-header.component';
-import { StoreNotificationsComponent } from './components/store-header/store-notifications/store-notifications.component';
-import { StoreSearchBarComponent } from './components/store-header/store-search-bar/store-search-bar.component';
-import { StoreFiltersComponent } from './components/store-filters/store-filters.component';
-import { StoreProductsComponent } from './components/store-products/store-products.component';
-import { StoreProductComponent } from './components/store-products/store-product/store-product.component';
-import { StoreSliderComponent } from './components/store-slider/store-slider.component';
+import { StoreHeaderComponent } from './components/store/shared/store-header/store-header.component';
+import { StoreNotificationsComponent } from './components/store/shared/store-header/store-notifications/store-notifications.component';
+import { StoreSearchBarComponent } from './components/store/shared/store-header/store-search-bar/store-search-bar.component';
+import { StoreFiltersComponent } from './components/store/store-filters/store-filters.component';
+import { StoreFilterComponent } from './components/store/store-filters/store-filter/store-filter.component';
+import { StoreProductsComponent } from './components/store/store-products/store-products.component';
+import { StoreProductComponent } from './components/store/store-products/store-product/store-product.component';
+import { StoreSliderComponent } from './components/store/store-slider/store-slider.component';
+import { StoreNotificationShoppingCartComponent } from "./components/store/shared/store-header/store-notifications/store-notification-shopping-cart/store-notification-shopping-cart.component";
+
+//pages
+import { StoreComponent } from './pages/store/store.component';
+import { StoreHomeComponent } from './pages/store/store-home/store-home.component';
 import { ShoppingCartComponent } from './pages/store/shopping-cart/shopping-cart.component';
-import { ShoppingCartModalComponent } from './components/store-header/store-notifications/shopping-cart-modal/shopping-cart-modal.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { StoreComponent } from './pages/store/store/store.component';
-import { FilterComponent } from './components/store-filters/filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -34,9 +40,9 @@ import { FilterComponent } from './components/store-filters/filter/filter.compon
     StoreProductComponent,
     StoreSliderComponent,
     ShoppingCartComponent,
-    ShoppingCartModalComponent,
     StoreComponent,
-    FilterComponent
+    StoreFilterComponent,    
+    StoreNotificationShoppingCartComponent
   ],
   imports: [
     BrowserModule,

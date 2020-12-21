@@ -1,8 +1,8 @@
-<div class="text-right d-flex">
-  <div class="notify dropdown ml-2">
-    <a class="btn btn-outline-dark border-0 mb-0 d-flex"
+<div class="text-right d-flex justify-content-between">
+  <div class="notify dropdown w-50">
+    <a class="btn btn-outline-dark border-0 mb-0 w-75 text-center"
       data-toggle="dropdown">
-      <fa-icon [icon]="notify"></fa-icon>&nbsp;&nbsp;<span class="badge bg-danger text-white mt-1">{{notiCount}}</span>
+      <fa-icon [icon]="notify"></fa-icon><span class="badge rounded-circle bg-danger text-white">{{notiCount}}</span>
     </a>
     <div class="dropdown-menu border-0 bg-transparent">
       <div class="card border-0" style="width: 25rem;">
@@ -35,16 +35,13 @@
       </div>
     </div>
   </div>
-
-  <div class="dropdown cart ml-2">
-    <a [routerLink]="['/store/shopping-cart']" class="btn btn-outline-dark border-0 mb-0 d-flex"
+  <div class="dropdown cart ml-2 w-50">
+    <a [routerLink]="['/store/cart']" class="btn btn-outline-dark border-0 mb-0 w-75 text-center"
       data-toggle="dropdown">
-      <fa-icon [icon]="shoppingCart"></fa-icon>&nbsp;&nbsp;<span class="badge bg-danger text-white mt-1">{{cartItemCount}}</span>
+      <fa-icon [icon]="shoppingCart"></fa-icon><span *ngIf="cartItemCount > 0" class="badge rounded-circle bg-danger text-white">{{cartItemCount}}</span>
     </a>
     <div class="dropdown-menu border-0 bg-transparent">
-      <ShoppingCartModal></ShoppingCartModal>
+      <StoreNotificationShoppingCart [productos]="productos" (countChanged)="countChangedHandler($event)"></StoreNotificationShoppingCart>
     </div>
   </div>
 </div>
-
-

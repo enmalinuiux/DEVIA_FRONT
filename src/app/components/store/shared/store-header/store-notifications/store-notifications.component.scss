@@ -8,7 +8,11 @@
     .dropdown-menu{ display: none; margin-top: 0; position: absolute; transform: translateX(-77.5%); }
 }
 
-.notify:hover, .cart:hover{
+.cart:hover{
+    .dropdown-menu{ display: block; }
+}
+
+.notify:hover{
     .dropdown-menu{ display: block; }
 }
 
@@ -16,4 +20,16 @@
     max-height: 40vh;
     min-height: 40vh;
     overflow-y: scroll;
+}
+
+.badge{
+    font-size: .75rem;
+    position: absolute;
+    border: white 2px solid;
+    padding: .3rem .47rem;
+    transform: translateX(-32%);
+}
+
+fa-icon{
+    font-size: 1.3rem;
 }
