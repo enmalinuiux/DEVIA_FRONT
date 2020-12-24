@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  templateUrl: './store-home.component.html',
-  styleUrls: ['./store-home.component.scss']
+  templateUrl: './store-home.component.html'
 })
 export class StoreHomeComponent implements OnInit {
 
