@@ -12,9 +12,10 @@
     .dropdown-menu{ display: block; }
 }
 
-.notify:hover{
-    .dropdown-menu{ display: block; }
+.notify{    
+    button:focus ~ .dropdown-menu { display: block; }
 }
+
 
 .card{
     max-height: 40vh;
